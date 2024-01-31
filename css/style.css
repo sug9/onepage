@@ -1,0 +1,413 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{scroll-behavior: smooth;}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* Header_______________________ */
+
+header{
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: rgba(210, 224, 230, 0.808);
+  z-index: 1;
+}
+nav{
+  /* border: 1px solid green; */
+  width: 1200px;
+  height: inherit;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  width: 200px;
+  top: 25%;
+/*   border: 1px solid yellow; */
+}
+
+.menu{
+/*   border: 1px solid orange; */
+  display: flex;
+  color: #000;
+}
+
+.menu li a{
+  margin: 0 10px;
+/*   border: 1px solid red; */
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+
+}
+.menu li a:before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  left: 50%;
+  height: 2px;
+  transform: translate(-50%);
+  background-color: goldenrod;
+  transition: 0.5s;
+}
+.menu li a:hover:before{width: 100%;}
+.menu li a:hover{color: goldenrod;}
+
+/* Main_______________________ */
+
+.visual{
+  width: 100%;
+  height: 620px;
+  background: url(../image/banner.jpg) no-repeat center top ;
+  background-size: cover;
+}
+
+
+/* section_______________________ */
+
+section{
+  width: 100%;
+}
+
+input[name=tabmenu]{display: none;}
+
+.content{
+  display: none;
+  margin: auto;
+  width: 1400px;
+  background-image: url(../image/banner.png);
+  opacity: 0.8;
+  padding: 5px 20px 20px;
+  border-radius: 100px;  
+  color: #000;
+}
+
+#aboutus{
+  padding: 10px 0 60px 0;
+  height: 400px;
+  position: relative;
+  background-color: rgba(205, 208, 214, 0.61);
+  
+}
+#aboutus p{
+  line-height: 30px;
+}
+
+.btn{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 5px;
+
+}
+
+.btn label{
+  background-color: lightgray;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[id=tab1]:checked ~.a1,
+input[id=tab2]:checked ~.a2,
+input[id=tab3]:checked ~.a3{
+  display: block;
+
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+  background-color: crimson;
+}
+
+
+section h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 40px 0;
+}
+section h3{
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+#aboutus p{
+  width: 1200px;
+  margin: auto;
+}
+
+
+
+
+
+
+#ourhistory{
+  width: 100%;
+  background-color: #fff;
+  margin: 60px 0;
+}
+#ourhistory ul{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+}
+
+@keyframes ani{
+  0%{transform: translateX(-100px);}
+  50%{transform: translateX(100px);}
+  100%{transform: translateX(-100px);}
+}
+
+#ourhistory ul li{
+  position: relative;
+  font-size: 20px;
+  width: 500px;
+  height: 400px;
+  margin-right: 20px;
+  animation: ani 5s infinite;
+}
+img{
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  top: 0;
+  left: 0;
+  margin-right: 20px;
+}
+#ourhistory ul li span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  line-height: 370px;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+/*   border: 1px solid yellowgreen; */
+  z-index: 1;
+  /* opacity: 0; */
+}
+
+#ourhistory ul li p{
+  font-size: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: gray;
+  border-radius: 15px;
+  padding: 0 5px;
+  color: #fff;
+}
+
+
+
+/* coffee___________________ */
+
+#coffee{
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(214, 209, 205, 0.869);
+}
+#coffee img{
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  position: relative;
+}
+
+section .vertuo ul,
+section .original ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#coffee li{transition: 0.2s;}
+#coffee li:hover img{
+  border-radius: 50%;
+  background-color: gold;
+  box-sizing: border-box;
+}
+#coffee li:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.vertuo,
+.original{
+  width: 1300px;
+  height: 290px;
+  margin: 20px auto;
+  border-radius: 150px;
+  position: relative;
+  padding-bottom: 20px;
+  background-color: rgba(228, 147, 54, 0.309);
+}
+section i{
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  background-color: chocolate;
+  border-radius: 30px;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+
+
+
+
+
+/* machines_________________ */
+
+
+#machines ul{
+  height: 800px;
+  display: flex;
+  margin: auto;
+}
+
+.vertuo-ma li{
+  border-right: 5px solid #000;
+  width: 100%;
+  font-size: 20px;
+  background-color: #000;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  filter: grayscale(1.2);
+}
+
+.vertuo-ma li:nth-child(1){
+  background: url(../image/machine/1.png) no-repeat center center ;
+}
+.vertuo-ma li:nth-child(2){
+  background: url(../image/machine/4.png) no-repeat center center ;
+}
+.vertuo-ma li:nth-child(3){
+  background: url(../image/machine/7.png) no-repeat center center ;
+}
+
+@keyframes ani1{
+  25%{background: url(../image/machine/1.png)no-repeat center center;}
+  50%{background: url(../image/machine/2.png)no-repeat center center;}
+  75%{background: url(../image/machine/3.png)no-repeat center center;}
+  100%{background: url(../image/machine/1.png)no-repeat center center;}
+}
+
+@keyframes ani2{
+  25%{background: url(../image/machine/4.png)no-repeat center center;}
+  50%{background: url(../image/machine/5.png)no-repeat center center;}
+  75%{background: url(../image/machine/6.png)no-repeat center center;}
+  100%{background: url(../image/machine/4.png)no-repeat center center;}
+}
+@keyframes ani3{
+  25%{background: url(../image/machine/7.png)no-repeat center center;}
+  50%{background: url(../image/machine/8.png)no-repeat center center;}
+  75%{background: url(../image/machine/9.png)no-repeat center center;}
+  100%{background: url(../image/machine/7.png)no-repeat center center;}
+}
+
+.vertuo-ma li:hover{
+  flex: 4;
+  filter: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.vertuo-ma li:hover:nth-child(1){animation: ani1 infinite 2.5s;}
+.vertuo-ma li:hover:nth-child(2){animation: ani2 infinite 2.5s;}
+.vertuo-ma li:hover:nth-child(3){animation: ani3 infinite 2.5s;}
+
+
+
+#faq{
+  height: 400px;
+  background-color: antiquewhite;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.faq1{
+  position: absolute;
+  width: 1200px;
+  height: 400px;
+  top: 0;
+}
+.faq1 ul{
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.faq1 li{
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  border-bottom: 1px solid #000;
+}
+
+.faq1 p{
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  top: 100%;
+  width: 100%;
+}
+
+
+
+.faq1 li:nth-child(1):hover,
+.faq1 li:nth-child(2):hover,
+.faq1 li:nth-child(3):hover,
+.faq1 li:nth-child(4):hover{
+  height: 120px;
+  background-color: rgba(210, 105, 30, 0.273);
+}
+
+.faq1 li:nth-child(1):hover p,
+.faq1 li:nth-child(2):hover p,
+.faq1 li:nth-child(3):hover p,
+.faq1 li:nth-child(4):hover p{
+  top: 50%;
+  transition: 0.4s;
+}
+
+
+
+/* footer_________________________ */
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
